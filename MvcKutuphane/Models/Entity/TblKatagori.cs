@@ -20,7 +20,7 @@ namespace MvcKutuphane.Models.Entity
             this.TblKitap = new HashSet<TblKitap>();
         }
     
-        public byte KategoriId { get; set; }
+        public Byte KategoriId { get; set; }
         public string Ad { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
