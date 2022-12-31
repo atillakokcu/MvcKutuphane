@@ -22,7 +22,7 @@ namespace MvcKutuphane.Models.Entity
     
         public int KitapId { get; set; }
         public string KitapAdi { get; set; }
-        public Nullable<byte> KategoriId { get; set; }
+        public Nullable<int> KategoriId { get; set; }
         public Nullable<int> YazarId { get; set; }
         public string BasimYil { get; set; }
         public string YayinEvi { get; set; }

@@ -21,7 +21,6 @@ namespace MvcKutuphane.Controllers
         [HttpGet]
         public ActionResult KategoriEkle()
         {
-
             return View();
         }
 
@@ -39,7 +38,21 @@ namespace MvcKutuphane.Controllers
             db.TblKatagori.Remove(Kategori);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
 
+        public ActionResult KategoriGetir(int Id) // neden sadece buraya ıd isili parametre verdiğimiz de algılıyor
+        {
+
+            var ktg = db.TblKatagori.Find(Id);
+            return View("KategoriGetir", ktg);
+        }
+
+        public ActionResult KategoriGuncelle(TblKatagori Kategori)
+        {
+            var ktg = db.TblKatagori.Find(Kategori.KategoriId);
+            ktg.Ad = Kategori.Ad;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
