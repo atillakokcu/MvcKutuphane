@@ -18,6 +18,8 @@
         <th>SOYAD</th>
         <th>ID</th>
         <th>DETAY</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
     </tr>
 
     @foreach (var Yazar in Model)
@@ -27,6 +29,8 @@
             <td>@Yazar.YazarSoyad</td>
             <td>@Yazar.YazarId</td>
             <td>@Yazar.YazarDetay</td>
+            <td>@Html.ActionLink("Sil","YazarSil",new {id = Yazar.YazarId },new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musun?')"  })</td>
+            <td><a href="~/Yazar/YazarGetir/@Yazar.YazarId" class="btn btn-success">Güncelle</a></td>
         </tr>
 
     }
