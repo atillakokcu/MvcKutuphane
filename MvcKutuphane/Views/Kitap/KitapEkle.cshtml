@@ -12,11 +12,12 @@
     </div>
     <div style="margin-top:15px">
         <label> Kitap Kategori</label>
-        @*@Html.DropDownListFor();*@
+        @Html.DropDownListFor(k=>k.TblKatagori.KategoriId,(List<SelectListItem>)ViewBag.Katagori,new {@class="form-control"})
     </div>
     <div style="margin-top:15px">
         <label> Kitap Yazar</label>
-        @Html.TextBoxFor(k => k.YazarId, new { @class = "form-control" })
+        @Html.DropDownListFor(i=>i.TblYazar.YazarId,(List<SelectListItem>)ViewBag.Yazar,new {@class="form-control"})
+        
     </div>
     <div style="margin-top:15px">
         <label> Basım Yılı</label>
