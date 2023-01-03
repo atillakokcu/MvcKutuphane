@@ -69,8 +69,8 @@
           <Key>
             <PropertyRef Name="PersonelId" />
           </Key>
-          <Property Name="PersonelId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Personel" Type="varbinary" MaxLength="50" />
+          <Property Name="PersonelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Personel" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TblUyeler">
           <Key>
@@ -311,8 +311,8 @@
           <Key>
             <PropertyRef Name="PersonelId" />
           </Key>
-          <Property Name="PersonelId" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Personel" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="PersonelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Personel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TblUyeler">
           <Key>

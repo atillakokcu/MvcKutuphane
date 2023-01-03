@@ -14,7 +14,7 @@ namespace MvcKutuphane.Models.Entity
     
     public partial class TblPersonel
     {
-        public byte PersonelId { get; set; }
-        public byte[] Personel { get; set; }
+        public int PersonelId { get; set; }
+        public string Personel { get; set; }
     }
 }
